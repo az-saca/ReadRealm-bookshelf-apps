@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadRealm - Bookshelf Apps</title>
+    <!-- Link to CSS styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Fonts stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome icons stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Logo and site title -->
+        <div class="logo">
+            <img src="assets/img/logo.jpeg" alt="ReadRealm Logo">
+            <h1>ReadRealm</h1>
+        </div>
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="#book-on-read">ReadList</a></li>
+                <li><a href="#book-completed">FinishedList</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main content section -->
+    <main>
+        <div class="wrapper">
+            <!-- Slideshow for banner images -->
+            <div class="realm-header">
+                <div class="img-slide">
+                    <img class="slideshow" src="assets/img/Brown Green Aesthetic Book Store Welcome Banner.png" alt="Slide 1">
+                    <img class="slideshow" src="assets/img/Ivory Modern Minimalistic Signature Newsletter Email Header.png" alt="Slide 2">
+                    <img class="slideshow" src="assets/img/Krem Cokelat Artistik Banner Festival Buku Pintar.png" alt="Slide 3">
+                    <img class="slideshow" src="assets/img/ream.jpeg" alt="Slide 4">
+                </div>
+            </div>
+            <!-- Search bar for searching books by title -->
+            <div class="realm-content">
+                <div class="realm-search">
+                    <i class="search-icon fas fa-search"></i>
+                    <input type="search" name="search-book" id="book-search" onkeyup="searchBook()" placeholder="Search By Title">
+                </div>
+                <div class="search-result" id="search-result"></div>
+            </div>
+            <!-- Section for displaying books that are currently being read -->
+            <div class="realm-content" id="book-on-read">
+                <div class="realm-reading-list">
+                    <h2>On Reading Book List</h2>
+                    <div class="list-book" id="on-read"></div>
+                </div>
+            </div>
+            <!-- Section for displaying books that have been completed -->
+            <div class="realm-content" id="book-completed">
+                <div class="realm-finished-list">
+                    <h2>Finished Book List</h2>
+                    <div class="list-book" id="on-finished"></div>
+                </div>
+            </div>
+            <!-- Form for adding a new book to the list -->
+            <div class="realm-content">
+                <div class="realm-input-form" id="add-book">
+                    <h2>Input New Book List</h2>
+                    <form class="form" action="#" id="add-book">
+                        <div class="input">
+                            <label for="input-book-title">Judul</label>
+                            <input id="input-book-title" type="text" required>
+                        </div>
+                        <div class="input">
+                            <label for="input-book-author">Penulis</label>
+                            <input id="input-book-author" type="text" required>
+                        </div>
+                        <div class="input">
+                            <label for="input-book-year">Tahun</label>
+                            <input id="input-book-year" type="number" maxlength="4" required>
+                        </div>
+                        <div class="input-inline">
+                            <label for="input-book-isComplete">Selesai dibaca</label>
+                            <input id="input-book-isComplete" type="checkbox">
+                        </div>
+                        <button id="book-submit" type="submit">Input Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 TRAVEL by Churun Ain Azkal Azkiya. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Link to the main JavaScript file -->
+    <script src="js/script.js"></script>
+    <!-- Link to SweetAlert2 library for alert dialogs -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

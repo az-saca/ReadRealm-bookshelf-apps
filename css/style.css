@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Quicksand, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #1e2a34;
+    width: 100%;
+    /* padding: 16px; */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+/* header > h1 {
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+} */
+
+.logo {
+    /* margin: 0 16px; */
+    display: flex;
+    align-items: center;
+    /* font-size: 24px; */
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h1 {
+    /* margin: 0 16px; */
+    font-size: 24px;
+}
+
+.slideshow{
+  object-fit: cover;
+  width: 100%;
+  height: 615px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    /* justify-content: center; */
+}
+
+nav ul li {
+    margin: 0 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #EBE4DE;
+    font-weight: bold;
+}
+
+input[type=search] {
+    border:none;
+    width:75%;
+    font-size: 14px;
+}
+
+input[type=search]:focus {
+    outline: none;
+}
+
+.realm-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 20px;
+    /* display: flex; */
+    border: 1px solid rgba(0, 0, 0, 0.276);;
+    border-radius: 50px;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.search-icon{
+    margin: 10px ; 
+    color:rgba(0, 0, 0, 0.564);
+}
+
+.search-result{
+    /* text-decoration: none; */
+    font-size: 20px;
+    margin-left: 7%;
+    font-weight: 700;
+    list-style: circle;
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+/* .realm-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.wrapper .realm-content {
+    width: 1024px;
+    border-radius: 8px;
+    /* margin-top: 100px; */
+    margin: 16px;
+    background: #F8F9FA;
+    padding: 16px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.realm-header{  
+    /* background: #5F30E2; */
+    width: 100%;
+    height: 600px;
+}
+
+.realm-input-form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.realm-input-form > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.realm-input-form > form > .input {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+}
+
+.realm-input-form > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+    width: 10%;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.realm-input-form > form > .input > input {
+    display: block;
+    width: 75%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+.realm-input-form > form > .input > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    width: 75%;
+}
+
+.realm-input-form > form > .input-inline {
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.realm-input-form > form > .input-inline > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+.item {
+    /* width: 100%; */
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.item > .inner h2 {
+    margin-bottom: unset;
+}
+
+.item > .inner p {
+    margin-top: 5px;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+.done-button{
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/icon/done-button.svg');
+    background-size: contain;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button {
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/icon/trash-button.svg');
+    background-size: contain;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button{
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/icon/undo-button.svg');
+    background-size: contain;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button{
+    width: 30px;
+    height: 30px;
+
+    background: url('../assets/icon/edit-button.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+
+.search-results {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.search-results li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.search-results li:hover {
+    background-color: #f0f0f0;
+}
