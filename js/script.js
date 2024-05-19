@@ -184,10 +184,27 @@ function addBookToCompleted(bookID) {
 function removeBookFromCompleted(bookID) {
   const bookIndex = books.findIndex((book) => book.id === bookID);
   if (bookIndex === -1) return;
-  books.splice(bookIndex, 1);
-  document.dispatchEvent(new Event(RENDER_EVENT));
-  saveData();
+
+  // Tampilkan peringatan swal
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      books.splice(bookIndex, 1);
+      document.dispatchEvent(new Event(RENDER_EVENT));
+      saveData();
+
+      Swal.fire("Terhapus!", "Data buku telah dihapus.", "success");
+    }
+  });
 }
+
 
 // Function to undo the completion of a book
 function undoBookFromCompleted(bookID) {
