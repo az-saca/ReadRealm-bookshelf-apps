@@ -14,25 +14,15 @@ html, body {
 header {
     background: #1e2a34;
     width: 100%;
-    /* padding: 16px; */
     color: white;
     display: flex;
     justify-content: space-between;
     position: fixed;
 }
 
-/* header > h1 {
-    margin: 0 16px;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-} */
-
 .logo {
-    /* margin: 0 16px; */
     display: flex;
     align-items: center;
-    /* font-size: 24px; */
 }
 
 .logo img {
@@ -41,7 +31,6 @@ header {
 }
 
 .logo h1 {
-    /* margin: 0 16px; */
     font-size: 24px;
 }
 
@@ -60,7 +49,6 @@ nav ul {
     list-style: none;
     align-items: center;
     display: flex;
-    /* justify-content: center; */
 }
 
 nav ul li {
@@ -95,7 +83,6 @@ input[type=search]:focus {
     justify-content: center;
     margin-top: 10px;
     font-size: 20px;
-    /* display: flex; */
     border: 1px solid rgba(0, 0, 0, 0.276);;
     border-radius: 50px;
     background-color: #fff;
@@ -109,7 +96,6 @@ input[type=search]:focus {
 }
 
 .search-result{
-    /* text-decoration: none; */
     font-size: 20px;
     margin-left: 7%;
     font-weight: 700;
@@ -125,17 +111,9 @@ input[type=search]:focus {
     height: max-content;
 }
 
-/* .realm-content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .wrapper .realm-content {
     width: 1024px;
     border-radius: 8px;
-    /* margin-top: 100px; */
     margin: 16px;
     background: #F8F9FA;
     padding: 16px;
@@ -144,7 +122,6 @@ input[type=search]:focus {
 }
 
 .realm-header{  
-    /* background: #5F30E2; */
     width: 100%;
     height: 600px;
 }
@@ -152,17 +129,19 @@ input[type=search]:focus {
 .realm-input-form {
     display: flex;
     flex-direction: column;
-    padding: 16px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .realm-input-form > form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
+}
+
+.realm-input-form > h2 {
+    font-size: 24px;
+    align-items: start;
+    width: 100%;
 }
 
 .realm-input-form > form > .input {
@@ -170,11 +149,10 @@ input[type=search]:focus {
     display: flex;
     flex-direction: column;
     width: 500px;
-    align-items: center;
 }
 
 .realm-input-form > form > button {
-    background-color: cornflowerblue;
+    background-color: #1E2A34;
     color: white;
     border: 0;
     border-radius: 5px;
@@ -195,7 +173,6 @@ input[type=search]:focus {
 
 
 .realm-input-form > form > .input > label {
-    color: cornflowerblue;
     font-weight: bold;
     width: 75%;
 }
@@ -203,26 +180,22 @@ input[type=search]:focus {
 .realm-input-form > form > .input-inline {
     margin: 12px 0;
     display: flex;
-    justify-content: center;
 }
 
 .realm-input-form > form > .input-inline > label {
-    color: cornflowerblue;
+    color: #C33149;
     font-weight: bold;
     margin-right: 10px;
 }
 
 
 .item {
-    /* width: 100%; */
     border-radius: 16px;
     margin-top: 16px;
     padding: 12px 24px 12px 24px;
     background: white;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 .item > .inner h2 {
@@ -240,7 +213,6 @@ input[type=search]:focus {
 .done-button{
     width: 30px;
     height: 30px;
-
     background: url('../assets/icon/done-button.svg');
     background-size: contain;
     margin-left: 10px;
@@ -251,7 +223,6 @@ input[type=search]:focus {
 .trash-button {
     width: 30px;
     height: 30px;
-
     background: url('../assets/icon/trash-button.svg');
     background-size: contain;
     margin-left: 10px;
@@ -262,7 +233,6 @@ input[type=search]:focus {
 .undo-button{
     width: 30px;
     height: 30px;
-
     background: url('../assets/icon/undo-button.svg');
     background-size: contain;
     margin-left: 10px;
@@ -273,7 +243,6 @@ input[type=search]:focus {
 .edit-button{
     width: 30px;
     height: 30px;
-
     background: url('../assets/icon/edit-button.svg');
     background-size: contain;
     margin-left: auto;
@@ -281,27 +250,75 @@ input[type=search]:focus {
     border: none;
 }
 
-
-.search-results {
-    display: none; 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    max-height: 200px;
-    overflow-y: auto;
+footer{
+  background-color: #344D67;
+  color: #fff;
+  text-align: center;
+  display: flex;
+    justify-content: center;
+  background-color: #1e2a34;
+  font-weight: bold;
 }
 
-.search-results li {
-    padding: 8px;
-    cursor: pointer;
+@media (max-width: 1024px) {
+    .wrapper .realm-content {
+        width: 90%;
+        margin: 8px;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .shadow {
+        flex-direction: column;
+        padding: 12px;
+    }
 }
 
-.search-results li:hover {
-    background-color: #f0f0f0;
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 8px;
+    }
+
+    .wrapper .realm-content {
+        width: 100%;
+        margin: 8px;
+        padding: 8px;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .shadow {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .realm-search {
+        font-size: 16px;
+    }
+
+    .search-result {
+        font-size: 16px;
+        margin-left: 5%;
+    }
 }
